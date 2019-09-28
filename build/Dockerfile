@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 
 RUN apk add --no-cache make gcc musl-dev linux-headers git jq
 
-ARG COMMIT=cfbb969da803d4cc92e1a64fc1b3c06db299b564
+ARG COMMIT=a1c09b93871dd3770adffb177086abda1b2ff3af
 
 RUN git clone https://github.com/ethereum/go-ethereum.git
 RUN cd go-ethereum && git checkout $COMMIT && make geth
