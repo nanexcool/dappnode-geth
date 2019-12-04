@@ -1,14 +1,14 @@
 {
   "name": "ethchain-geth.public.dappnode.eth",
-  "version": "10.0.4",
-  "description": "Ethereum (Geth) - based on Geth v1.9.5",
+  "version": "10.0.5",
+  "description": "Ethereum (Geth) - based on Geth v1.9.7",
   "avatar": "/ipfs/QmZ1Yn6M1bUzRm7yPp2wB5sx7JBHJ5gYJvR8HpDnYtiQyh",
   "type": "library",
   "chain": "ethereum",
   "image": {
-    "path": "ethchain-geth.public.dappnode.eth_10.0.4.tar.xz",
-    "hash": "/ipfs/QmXzJ29F4RJGtv2FBAggkqf6JQi6bYZGehsDpDb1qJ7C9B",
-    "size": 16233214,
+    "path": "ethchain-geth.public.dappnode.eth_10.0.5.tar.xz",
+    "hash": "/ipfs/QmctQZw2mSE1csjbdAgDxHm9FWWWrcdhAqCsydjTN3sjmQ",
+    "size": 16250954,
     "restart": "always",
     "ports": [
       "8545:8545",
