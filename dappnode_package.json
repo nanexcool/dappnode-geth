@@ -1,21 +1,18 @@
 {
   "name": "ethchain-geth.public.dappnode.eth",
-  "version": "10.0.5",
-  "description": "Ethereum (Geth) - based on Geth v1.9.7",
-  "avatar": "/ipfs/QmZ1Yn6M1bUzRm7yPp2wB5sx7JBHJ5gYJvR8HpDnYtiQyh",
+  "version": "10.0.7",
+  "description": "Ethereum Client - based on Geth",
+  "avatar": "/ipfs/QmVQUEapZGZ7tWfDWP4XUQBxCe2rLbdPJLXu3QaLiPp542",
   "type": "library",
   "chain": "ethereum",
   "image": {
-    "path": "ethchain-geth.public.dappnode.eth_10.0.5.tar.xz",
-    "hash": "/ipfs/QmctQZw2mSE1csjbdAgDxHm9FWWWrcdhAqCsydjTN3sjmQ",
-    "size": 16250954,
+    "path": "ethchain-geth.public.dappnode.eth_10.0.7.tar.xz",
+    "hash": "/ipfs/Qmb7VsCscjNq1UHkPzuBesrV7JnqBUpXsBdJPVsp2zJWZA",
+    "size": 17927104,
     "restart": "always",
     "ports": [
-      "8545:8545",
-      "8546:8546",
-      "61313:30303",
-      "61313:30303/udp",
-      "61314:30304"
+      "30303:30303",
+      "30303:30303/udp"
     ],
     "volumes": [
       "ethchain-geth:/root/.ethereum/ethchain-geth"
@@ -24,8 +21,8 @@
       "EXTRA_OPTS=--rpcapi eth,net,web3,txpool"
     ]
   },
-  "author": "nanexcool",
-  "license": "GLP-3.0",
+  "author": "AVADO",
+  "license": "(C)",
   "links": {
     "endpoint": "http://my.ethchain-geth.public.dappnode.eth:8545"
   }

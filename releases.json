@@ -1,0 +1,16 @@
+{
+  "10.0.6": {
+    "hash": "/ipfs/QmQQTXdx1drEcAY6JEkbP1Gbsiezg86bHDgtQgXs8wP1zi",
+    "type": "manifest",
+    "uploadedTo": {
+      "dappnode": "Sat, 30 May 2020 13:23:21 GMT"
+    }
+  },
+  "10.0.7": {
+    "hash": "/ipfs/QmfApzg6nsWmgYkSm5gFyuF6EAtWP5yqPveSt5WifyARzP",
+    "type": "manifest",
+    "uploadedTo": {
+      "dappnode": "Sat, 30 May 2020 13:30:06 GMT"
+    }
+  }
+}
