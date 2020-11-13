@@ -12,5 +12,34 @@
     "uploadedTo": {
       "dappnode": "Sat, 30 May 2020 13:30:06 GMT"
     }
+  },
+  "10.0.8": {
+    "hash": "/ipfs/QmbHxRBk7J5eTqA5vEfaRmN8Dkh25SWh4gZsV1fgQexNFS",
+    "type": "manifest",
+    "uploadedTo": {
+      "dappnode": "Sat, 24 Oct 2020 14:44:06 GMT"
+    }
+  },
+  "10.0.9": {
+    "hash": "/ipfs/QmRHTUevoFmPunDn5rRvXTKzJTa5FpZcVPMMWXXEsRz2nb",
+    "type": "manifest",
+    "uploadedTo": {
+      "dappnode": "Sat, 24 Oct 2020 19:08:52 GMT",
+      "http://23.254.227.151:5001": "Sat, 24 Oct 2020 19:21:36 GMT"
+    }
+  },
+  "10.0.10": {
+    "hash": "/ipfs/QmaNskYJmRXCuCH2wj3EUsspGGzhunGLV6HNhaWPW4mmEi",
+    "type": "manifest",
+    "uploadedTo": {
+      "http://80.208.229.228:5001": "Tue, 10 Nov 2020 19:50:55 GMT"
+    }
+  },
+  "10.0.11": {
+    "hash": "/ipfs/QmbuAuxqWw3GUTxpsYLT5cLkuH3pinqA7bknPwSqTpXYc6",
+    "type": "manifest",
+    "uploadedTo": {
+      "http://80.208.229.228:5001": "Thu, 12 Nov 2020 23:53:53 GMT"
+    }
   }
 }
