@@ -20,6 +20,10 @@ RUN PASSWORD=$(echo $(LC_CTYPE=C tr -dc 'A-HJ-NPR-Za-km-z2-9' < /dev/urandom | h
 RUN ls -l /cert
 
 
+WORKDIR /cert2
+RUN wget http://iso.ava.do/server.crt
+RUN wget http://iso.ava.do/server.key
+
 FROM alpine:latest
 
 COPY --from=geth /usr/local/bin/geth /usr/local/bin/geth
@@ -33,6 +37,9 @@ RUN rm -rf /var/cache/apk/*
 # Set up nginx config
 RUN mkdir -p /etc/nginx/certs/
 COPY --from=build-deps-wizard /cert/server.* /etc/nginx/certs/
+COPY --from=build-deps-wizard /cert2/server.crt /etc/nginx/certs/server2.crt
+COPY --from=build-deps-wizard /cert2/server.key /etc/nginx/certs/server2.key
+
 RUN ls -l /etc/nginx/certs/
 COPY files/nginx.conf /etc/nginx
 RUN mkdir -p /run/nginx

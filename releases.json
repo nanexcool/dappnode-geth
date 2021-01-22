@@ -46,7 +46,16 @@
     "hash": "/ipfs/QmRo9GsgeAndLuerDLQZGeYpesFuWqTKZoejcMvmqou5fb",
     "type": "manifest",
     "uploadedTo": {
-      "http://80.208.229.228:5001": "Fri, 13 Nov 2020 09:22:36 GMT"
+      "http://80.208.229.228:5001": "Fri, 13 Nov 2020 09:22:36 GMT",
+      "dappnode": "Fri, 13 Nov 2020 09:40:30 GMT"
+    }
+  },
+  "10.0.13": {
+    "hash": "/ipfs/QmYVK2wsys2QtKtmCocZ7vojPbFxqqg2bTcq5wjS6UTASG",
+    "type": "manifest",
+    "uploadedTo": {
+      "http://80.208.229.228:5001": "Tue, 08 Dec 2020 23:49:27 GMT",
+      "dappnode": "Tue, 08 Dec 2020 23:49:59 GMT"
     }
   }
 }
