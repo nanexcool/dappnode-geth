@@ -1,4 +1,4 @@
-FROM ethereum/client-go:v1.9.24 as geth
+FROM ethereum/client-go:v1.9.25 as geth
 
 FROM node:12.14.1 as build-deps-wizard
 RUN apt-get update && apt-get install -y libusb-1.0-0-dev libudev-dev openssl
@@ -21,6 +21,7 @@ RUN ls -l /cert
 
 
 WORKDIR /cert2
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN wget http://iso.ava.do/server.crt
 RUN wget http://iso.ava.do/server.key
 

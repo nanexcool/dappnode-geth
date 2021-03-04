@@ -57,5 +57,12 @@
       "http://80.208.229.228:5001": "Tue, 08 Dec 2020 23:49:27 GMT",
       "dappnode": "Tue, 08 Dec 2020 23:49:59 GMT"
     }
+  },
+  "10.0.14": {
+    "hash": "/ipfs/QmdB9F3JGXmFBW7kv5mp8N8mu48K8PB5TnXLueA4YBEAqy",
+    "type": "manifest",
+    "uploadedTo": {
+      "http://80.208.229.228:5001": "Tue, 02 Mar 2021 20:17:39 GMT"
+    }
   }
 }
