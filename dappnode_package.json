@@ -1,7 +1,7 @@
 {
   "name": "ethchain-geth.public.dappnode.eth",
-  "version": "10.0.15",
-  "upstream": "v1.10.0",
+  "version": "10.0.16",
+  "upstream": "v1.10.1",
   "autoupdate": true,
   "title": "Ethereum node (Geth + mainnet)",
   "description": "Ethereum Client - based on Geth",
@@ -9,9 +9,9 @@
   "type": "library",
   "chain": "ethereum",
   "image": {
-    "path": "ethchain-geth.public.dappnode.eth_10.0.15.tar.xz",
-    "hash": "/ipfs/QmbQyrhzeG5EEqTPf4LsciwQ42UFfC2GCEQJ7ms2dFfMfd",
-    "size": 29652996,
+    "path": "ethchain-geth.public.dappnode.eth_10.0.16.tar.xz",
+    "hash": "/ipfs/QmaTmNkpDXvfNU9rKFsucNsXouc62oyGK2i3yi12aAg4fS",
+    "size": 29619688,
     "restart": "always",
     "ports": [
       "30303:30303",
@@ -21,7 +21,7 @@
       "ethchain-geth:/root/.ethereum/ethchain-geth"
     ],
     "environment": [
-      "EXTRA_OPTS=--rpcapi eth,net,web3,txpool"
+      "EXTRA_OPTS=--http.api eth,net,web3,txpool"
     ]
   },
   "author": "AVADO",
