@@ -1,17 +1,17 @@
 version: '3.4'
 services:
   ethchain-geth.public.dappnode.eth:
-    image: 'ethchain-geth.public.dappnode.eth:10.0.20'
+    image: 'ethchain-geth.public.dappnode.eth:10.0.21'
     build: ./build
     volumes:
       - 'ethchain-geth:/root/.ethereum/ethchain-geth'
     environment:
       - EXTRA_OPTS=
     ports:
-      - '443:443'
-      - '8546:8546'
-      - '8545:8545'
-      - '30303:30303'
-      - '30303:30303/udp'
+      - '443:443' # https (json-rpc)
+      - '8546:8546' # wss (json-rpc)
+      - '8545:8545' # http (json-rpc)
+      - '30303:30303' # listener
+      - '30303:30303/udp' # discovery
 volumes:
   ethchain-geth: {}
