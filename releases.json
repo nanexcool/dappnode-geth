@@ -127,5 +127,19 @@
     "uploadedTo": {
       "http://80.208.229.228:5001": "Thu, 22 Jul 2021 18:10:04 GMT"
     }
+  },
+  "10.0.24": {
+    "hash": "/ipfs/QmdXM95ohgjyuMEZAMASxKBdhXKSrPorj8p4YW2jbbCBeX",
+    "type": "manifest",
+    "uploadedTo": {
+      "http://80.208.229.228:5001": "Thu, 12 Aug 2021 12:31:41 GMT"
+    }
+  },
+  "10.0.25": {
+    "hash": "/ipfs/QmW43jbyqMHnAzZStck4WBR7zC1qYErdETjDHsrXN4ddyn",
+    "type": "manifest",
+    "uploadedTo": {
+      "http://80.208.229.228:5001": "Tue, 24 Aug 2021 07:31:28 GMT"
+    }
   }
 }
