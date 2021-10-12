@@ -1,6 +1,6 @@
 {
   "name": "ethchain-geth.public.dappnode.eth",
-  "version": "10.0.26",
+  "version": "10.0.27",
   "upstream": "v1.10.9",
   "autoupdate": true,
   "title": "Ethereum node (Geth + mainnet)",
@@ -9,9 +9,9 @@
   "type": "library",
   "chain": "ethereum",
   "image": {
-    "path": "ethchain-geth.public.dappnode.eth_10.0.26.tar.xz",
-    "hash": "/ipfs/QmQnPyYaTMqUhLpqsuL3zovjHzrn5LssFBvNf75vVG5m4y",
-    "size": 31839436,
+    "path": "",
+    "hash": "",
+    "size": "",
     "restart": "always",
     "ports": [
       "443:443",
@@ -31,5 +31,5 @@
     "RPC endpoint": "http://my.ethchain-geth.public.dappnode.eth:8545",
     "RPC endpoint (SSL)": "https://my.ethchain-geth.public.dappnode.eth"
   },
-  "builddate": "2021-09-29T20:36:57.573Z"
+  "builddate": "2021-10-06T15:38:51.655Z"
 }

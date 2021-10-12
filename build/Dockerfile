@@ -1,4 +1,4 @@
-FROM ethereum/client-go:v1.10.9 as geth
+FROM ethereum/client-go:v1.10.6 as geth
 
 FROM node:12.14.1 as build-deps-wizard
 RUN apt-get update && apt-get install -y libusb-1.0-0-dev libudev-dev openssl
@@ -28,4 +28,9 @@ COPY files/nginx.conf /etc/nginx
 RUN mkdir -p /run/nginx
 
 COPY ./files/supervisord.conf /etc/supervisord.conf
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+
+# Startup script
+COPY ./files/start.sh /opt/start.sh
+RUN chmod +x /opt/start.sh
+
+ENTRYPOINT ["/opt/start.sh"]
