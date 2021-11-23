@@ -8,4 +8,8 @@ echo "EXTRA_OPTS=$EXTRA_OPTS"
 echo "EXTRA_OPTS_PARSED=$EXTRA_OPTS_PARSED"
 echo "GETH_CMD=$GETH_CMD"
 
+# Print version to the log
+/usr/local/bin/geth version
+
+# Start supervisor
 /usr/bin/supervisord -c /etc/supervisord.conf
