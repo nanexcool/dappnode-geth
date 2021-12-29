@@ -10,8 +10,8 @@
   "chain": "ethereum",
   "image": {
     "path": "ethchain-geth.public.dappnode.eth_10.0.33.tar.xz",
-    "hash": "/ipfs/QmPQVZEShDxFLWyLPvAV3zSmzPE1dXWK8kXo91r6pTtfKA",
-    "size": 32562124,
+    "hash": "/ipfs/QmZ9iRDNEfnXB3pFyo4VkypWt42Ra1ZcxxRG2BvDZDa6JM",
+    "size": 32856280,
     "restart": "always",
     "ports": [
       "443:443",
@@ -31,5 +31,5 @@
     "RPC endpoint": "http://my.ethchain-geth.public.dappnode.eth:8545",
     "RPC endpoint (SSL)": "https://my.ethchain-geth.public.dappnode.eth"
   },
-  "builddate": "2021-12-23T11:07:11.648Z"
+  "builddate": "2021-12-23T11:11:45.232Z"
 }
