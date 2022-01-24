@@ -19,7 +19,8 @@
     ],
     "environment": [
       "EXTRA_OPTS=--http.api eth,net,web3,txpool"
-    ]
+    ],
+    "size": 32799060
   },
   "author": "AVADO",
   "license": "(C)",
@@ -27,5 +28,5 @@
     "RPC endpoint": "http://my.ethchain-geth.public.dappnode.eth:8545",
     "RPC endpoint (SSL)": "https://my.ethchain-geth.public.dappnode.eth"
   },
-  "builddate": "2022-01-24T10:31:49.575Z"
+  "builddate": "2022-01-24T11:25:09.753Z"
 }
