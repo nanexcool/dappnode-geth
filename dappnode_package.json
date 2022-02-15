@@ -1,7 +1,7 @@
 {
   "name": "ethchain-geth.public.dappnode.eth",
-  "version": "10.0.35",
-  "upstream": "v1.10.15",
+  "version": "10.0.36",
+  "upstream": "v1.10.16",
   "autoupdate": true,
   "title": "Ethereum node (Geth + mainnet)",
   "description": "Ethereum Client - based on Geth",
@@ -19,14 +19,12 @@
     ],
     "environment": [
       "EXTRA_OPTS=--http.api eth,net,web3,txpool"
-    ],
-    "size": 32799060
+    ]
   },
   "author": "AVADO",
   "license": "(C)",
   "links": {
     "RPC endpoint": "http://my.ethchain-geth.public.dappnode.eth:8545",
     "RPC endpoint (SSL)": "https://my.ethchain-geth.public.dappnode.eth"
-  },
-  "builddate": "2022-01-24T11:25:09.753Z"
+  }
 }
