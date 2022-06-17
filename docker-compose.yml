@@ -1,17 +1,19 @@
-version: '3.4'
+version: "3.5"
 services:
-  ethchain-geth.public.dappnode.eth:
-    image: 'ethchain-geth.public.dappnode.eth:0.0.3'
-    build: ./build
+  geth.dnp.dappnode.eth:
+    image: "geth.dnp.dappnode.eth:0.1.17"
+    build:
+      context: .
+      args:
+        UPSTREAM_VERSION: v1.10.18
     volumes:
-      - 'ethchain-geth:/root/.ethereum/ethchain-geth'
+      - "geth:/root/.ethereum"
     environment:
-      - EXTRA_OPTS=
+      - "EXTRA_OPTIONS=--http.api eth,net,web3,txpool"
+      - SYNCMODE=snap
     ports:
-      - '127.0.0.1:8546:8546'
-      - '127.0.0.1:8545:8545'
-      - '61313:30303'
-      - '61313:30303/udp'
-      - '61314:30304/udp'
+      - 30303/tcp
+      - 30303/udp
+    restart: unless-stopped
 volumes:
-  ethchain-geth: {}
+  geth: {}
