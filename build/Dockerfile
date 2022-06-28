@@ -21,6 +21,7 @@ COPY ./files/supervisord.conf /etc/supervisord.conf
 
 # Startup script
 COPY ./files/start.sh /opt/start.sh
-RUN chmod +x /opt/start.sh
+COPY ./files/reload-certs.sh /opt/reload-certs.sh
+RUN chmod +x /opt/start.sh /opt/reload-certs.sh
 
 ENTRYPOINT ["/opt/start.sh"]
