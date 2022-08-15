@@ -1,6 +1,6 @@
 {
   "name": "ethchain-geth.public.dappnode.eth",
-  "version": "10.0.42",
+  "version": "10.0.43",
   "upstream": "v1.10.21",
   "autoupdate": true,
   "title": "Ethereum node (Geth + mainnet)",
@@ -26,6 +26,7 @@
   "links": {
     "RPC endpoint": "http://ethchain-geth.my.ava.do:8545",
     "RPC endpoint (SSL)": "https://ethchain-geth.my.ava.do",
-    "WS endpoint": "ws://ethchain-geth.my.ava.do:8546"
+    "WS endpoint": "ws://ethchain-geth.my.ava.do:8546",
+    "EE endpoint (http)": "http://ethchain-geth.my.ava.do:8551"
   }
 }

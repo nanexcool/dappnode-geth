@@ -1,11 +1,12 @@
 FROM --platform=linux/amd64 ethereum/client-go:v1.10.21 as geth
 
 RUN apk update && apk add --no-cache \
-    supervisor \
+    bash \
+    ca-certificates \
     nginx \
+    openssl \
+    supervisor \
     && rm -rf /var/cache/apk/* && rm -rf /tmp/*
-
-#RUN adduser -D nginx
 
 # Set up nginx config
 RUN mkdir -p /etc/nginx/certs/
