@@ -42,4 +42,4 @@ echo "GETH_CMD=$GETH_CMD"
 /usr/local/bin/geth version
 
 # Start supervisor
-/usr/bin/supervisord -c /etc/supervisord.conf
+exec /usr/bin/supervisord -c /etc/supervisord.conf
