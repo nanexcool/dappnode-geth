@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Older installations use the deprecated option "--rpcapi" so replace it by "--http.api"
-export EXTRA_OPTS_PARSED=$(echo -n $EXTRA_OPTS | sed s/st--rpcapi/--http\.api/g)
+export EXTRA_OPTS_PARSED=$(echo -n $EXTRA_OPTS | sed s/--rpcapi/--http\.api/g)
 
 # Create JWTToken if it does not exist yet
 JWT_TOKEN="/root/.ethereum/ethchain-geth/geth/jwttoken"
