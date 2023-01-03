@@ -3,19 +3,13 @@
 # Older installations use the deprecated option "--rpcapi" so replace it by "--http.api"
 export EXTRA_OPTS_PARSED=$(echo -n $EXTRA_OPTS | sed s/--rpcapi/--http\.api/g)
 
-# Create JWTToken if it does not exist yet
+# Get JWT Token
 JWT_TOKEN="/root/.ethereum/ethchain-geth/geth/jwttoken"
-if [ ! -f ${JWT_TOKEN} ]; then
-    echo "Creating JWT Token"
-    mkdir -p "/root/.ethereum/ethchain-geth/geth/"
-    openssl rand -hex 32 | tr -d "\n" >${JWT_TOKEN}
-    cat ${JWT_TOKEN}
-fi
-
-# make JWT token available via nginx
-mkdir -p /usr/share/nginx/wizard/
-cat ${JWT_TOKEN} | tail -1 >/usr/share/nginx/wizard/jwttoken
-chmod 644 /usr/share/nginx/wizard/jwttoken
+mkdir -p $(dirname ${JWT_TOKEN})
+until $(curl --silent --fail "http://dappmanager.my.ava.do/jwttoken.txt" --output "${JWT_TOKEN}"); do
+  echo "Waiting for the JWT Token"
+  sleep 5
+done
 
 export GETH_CMD="/usr/local/bin/geth \
     --datadir /root/.ethereum/ethchain-geth\

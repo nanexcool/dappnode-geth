@@ -5,10 +5,8 @@ while true; do
     echo "Check for updated certificates"
 
     md5sumbefore=$(md5sum "/etc/nginx/certs/my.ava.do.crt")
-
-    wget -q -O /etc/nginx/certs/my.ava.do.crt http://iso.ava.do/my.ava.do.crt
-    wget -q -O /etc/nginx/certs/my.ava.do.key http://iso.ava.do/my.ava.do.key
-
+    wget -q -O /etc/nginx/certs/my.ava.do.crt "http://dappmanager.my.ava.do/my.ava.do.crt"
+    wget -q -O /etc/nginx/certs/my.ava.do.key "http://dappmanager.my.ava.do/my.ava.do.key"
     md5sumafter=$(md5sum "/etc/nginx/certs/my.ava.do.crt")
 
     if [ "$md5sumbefore" != "$md5sumafter" ]; then
