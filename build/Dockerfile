@@ -1,9 +1,10 @@
-FROM --platform=linux/amd64 ethereum/client-go:v1.11.3 as geth
+FROM --platform=linux/amd64 ethereum/client-go:v1.11.5 as geth
 
 RUN apk update && apk add --no-cache \
     bash \
     ca-certificates \
     curl \
+    lsb-release \
     nginx \
     openssl \
     supervisor \
