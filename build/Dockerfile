@@ -1,19 +1,30 @@
-# Build Geth in a stock Go builder container
-FROM golang:1.11-alpine as builder
+FROM --platform=linux/amd64 ethereum/client-go:v1.13.1 as geth
 
-WORKDIR /usr/src/app
+RUN apk update && apk add --no-cache \
+    bash \
+    ca-certificates \
+    curl \
+    lsb-release \
+    nginx \
+    openssl \
+    supervisor \
+    && rm -rf /var/cache/apk/* && rm -rf /tmp/*
 
-RUN apk add --no-cache make gcc musl-dev linux-headers git jq
+# Set up nginx config
+RUN mkdir -p /etc/nginx/certs/
+WORKDIR /etc/nginx/certs/
+ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
+RUN wget http://iso.ava.do/my.ava.do.crt && wget http://iso.ava.do/my.ava.do.key
 
-ARG COMMIT=cfbb969da803d4cc92e1a64fc1b3c06db299b564
+RUN ls -l /etc/nginx/certs/
+COPY files/nginx.conf /etc/nginx
+RUN mkdir -p /run/nginx
 
-RUN git clone https://github.com/ethereum/go-ethereum.git
-RUN cd go-ethereum && git checkout $COMMIT && make geth
+COPY ./files/supervisord.conf /etc/supervisord.conf
 
-# Pull Geth into a second stage deploy alpine container
-FROM alpine:latest
+# Startup script
+COPY ./files/start.sh /opt/start.sh
+COPY ./files/reload-certs.sh /opt/reload-certs.sh
+RUN chmod +x /opt/start.sh /opt/reload-certs.sh
 
-RUN apk add --no-cache ca-certificates
-COPY --from=builder /usr/src/app/go-ethereum/build/bin/geth /usr/local/bin/
-
-ENTRYPOINT geth --datadir /root/.ethereum/ethchain-geth --rpc --rpcaddr 0.0.0.0 --rpccorsdomain "*" --rpcvhosts "*" --ws --wsorigins "*" --wsaddr 0.0.0.0 $EXTRA_OPTS
+ENTRYPOINT ["/opt/start.sh"]
