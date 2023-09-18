@@ -25,8 +25,7 @@ export GETH_CMD="/usr/local/bin/geth \
     --authrpc.addr=\"0.0.0.0\" \
     --authrpc.port=\"8551\" \
     --authrpc.jwtsecret=\"${JWT_TOKEN}\" \
-     --rpc.gascap 0 \
-     --cache 4096 \
+    --rpc.gascap 0 \
     ${EXTRA_OPTS_PARSED}"
 
 echo "EXTRA_OPTS=$EXTRA_OPTS_PARSED"
