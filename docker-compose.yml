@@ -1,17 +1,26 @@
 version: "3.4"
 services:
   geth.dnp.dappnode.eth:
-    image: "geth.dnp.dappnode.eth:0.1.38"
+    image: "geth.dnp.dappnode.eth:0.1.43"
     build:
       context: .
       args:
-        UPSTREAM_VERSION: v1.12.0
+        UPSTREAM_VERSION: v1.13.2
     volumes:
       - "geth:/root/.ethereum"
     environment:
       - "EXTRA_OPTION=--http.api eth,engine,net,web3,txpool"
-      - P2P_PORT=30403
-      - SYNCMODE=snap
+      - GETH_HTTP=true
+      - GETH_HTTP_ADDR=0.0.0.0
+      - GETH_HTTP_CORSDOMAIN=*
+      - GETH_HTTP_VHOSTS=*
+      - GETH_SYNCMODE=snap
+      - GETH_WS=true
+      - GETH_WS_ADDR=0.0.0.0
+      - GETH_PORT=30403
+      - GETH_METRICS=true
+      - GETH_METRICS_ADDR=0.0.0.0
+      - GETH_STATE_SCHEME=path
     ports:
       - "30403:30403/tcp"
       - "30403:30403/udp"
